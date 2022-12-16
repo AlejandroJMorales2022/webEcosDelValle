@@ -45,8 +45,8 @@
     ;
     /*grid-row-gap: 2px;
     grid-column-gap: 2px;*/
-    justify-items: center;
-    align-items: center;
+    /*justify-items: center;
+    align-items: center;*/
 }
 .grillaMain{
     width: 100vw;
@@ -93,15 +93,18 @@
 }
 .cabeceraMenu{
     grid-area: cabeMenu;
-    position: relative;
-    margin-top: -50px;
+
 }
 .cabeceraImg{
     width: 400px;
     padding: 5px;
-    position: relative;    
+       
 }
-
+.cabeceraMenuLista li{
+    position:relative;
+    top: 20px;
+    
+}
 .pieTexto{
     grid-area: pieTxt;
 }
@@ -1060,8 +1063,12 @@ hr{
 }
 @media  (max-width: 425px){
 
+    .cabecera{
+        height: 12vh;
+    }
     .cabeceraMenuLista{
-        margin-top: 10px;
+        position:relative;
+
     } 
       .cabeceraMenuLista li{
         font: 11px arial;
@@ -1071,7 +1078,10 @@ hr{
     }
     .cabeceraImg{
         width: 220px;
-        padding: 4px;
+        position:relative;
+        top:10px;
+        left: -5px;
+
           
     }
     #titulo{
@@ -1152,12 +1162,6 @@ hr{
         top: 4px;
         left: -30px;
     }
-    /*.pie{
-        margin-top: 1300px;
-    }
-    .pieTexto{
-        font-size: 0.6rem;
-    }*/
     .pieLogosRedes #img1{
         width:40px;
         position: relative;
@@ -1165,10 +1169,7 @@ hr{
 
     }
     .pieLogosRedes #img2{
-        width:40px;
-       
-       
-        
+        width:40px;    
     }
     .logoWhatsApp{
         width: 40px;
@@ -1190,25 +1191,26 @@ hr{
     .seccion2_columnaDerecha{
         width: 100%;
     }
+    /* contacto.html */
     .formBloque1 #nombre{
-        width: 250px;
+        width: 230px;
     }
     .formBloque2 #telefono{
-        width: 150px;
+        width: 130px;
     }
     .formBloque3 #email{
-        width: 270px;
+        width: 250px;
     }
     .formBloque4{
         margin-left: -100px;
-        width: 360px;
+        width: 340px;
     }
     .formBloque5{
         margin-left: -100px;
     }
     .formBloque4 #lblFechaH {
         width: 100px;
-        margin-left:65px;
+        margin-left:30px;
     }
     .formBloque4 #lblFechaD{
         width: 200px;
@@ -1218,16 +1220,16 @@ hr{
     } 
     .formBloque5 #fechaH {
         width: 100px;
-        margin-left: 70px;
+        margin-left: 40px;
     }
     .formBloque6 #obs {
-        width: 360px;
+        width: 315px;
     } 
     .formBloque6 {
         margin-left: -80px;
     } 
     .marco{
-        width: 400px;
+        width: 360px;
     }
     /* cabanas.html */
     .navCabanas{
@@ -1250,6 +1252,7 @@ hr{
     .navegacion li{
         font-size: 0.8rem;
         padding: 6px;
+        
     }
     .cabana1{
         width: 90vw;
@@ -1260,7 +1263,6 @@ hr{
         position: relative;
         top: -220px;
         overflow:visible;
-    
     }
     .cabana1_texto{ 
         width: 95vw;  
@@ -1268,43 +1270,45 @@ hr{
         margin-left: 0px; 
         margin-top: -30px;
         font-size: 0.8rem;
-
+        /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        grid-area: cab1texto;*/
     }
     .img1 img{
         width: 300px;
         
     }
     .img1_1 img{
-        width:120px;
+        width:100px;
     }
     .img1_2 img{
-        width: 120px;
+        width: 100px;
     }
     .img1_3 img{
-        width: 120px;
+        width: 100px;
     }
     .img1_4 img{
-        width: 120px;
+        width: 100px;
     }
     .img1_5 img{
-        width: 120px;
+        width: 100px;
     }
     .img1{
         grid-area: img1;
         justify-self:center;
-        margin-left: 0px;
+        margin-left: 50px;
     
     }
     .img1_1{
         grid-area: img1_1;
         width:auto;
-        margin-left: 40px;
+        margin-left: 70px;
         
     }
     .img1_2{
         grid-area: img1_2;
         width: auto;
-        margin-left: 40px;
+        margin-left: 70px;
 
         
     }
@@ -1312,20 +1316,21 @@ hr{
         grid-area: img1_3;
         width: auto;
         justify-self: center;
-        margin-left: -30px;
+        margin-left: -15px;
         
     }
     .img1_4{
         grid-area: img1_4;
         width: auto;
         justify-self: center;
-        margin-left: 30px;
+        position:relative;
+        margin-left: 40px;
         
     }
     .img1_5{
         grid-area: img1_5;
         width: auto;
-        margin-left: 40px;
+        margin-left: 70px;
     }
 
 }
@@ -1333,18 +1338,45 @@ hr{
 
 @media  (max-width: 375px){
    
-    .cabecera { /*Cabecera dePagina con Logo y Menu de Navegación*/
-        height: 16vh;
-        width: 108vw;
+    .cabecera{
+        height: 12vh;
     }
     .cabeceraMenuLista{
-        margin-top: 5px;
+        margin-top: -20px;
     } 
+   
     .pie{
         margin-top: 1600px;
-        width: 108vw;
+        width: 100vw;
         height: 16vh;
-       }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .pieTexto p{
+        text-align: center;
+        margin-left: -40px;
+        width: 90%;
+
+    }
+    .pieLogosRedes{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+        top: 4px;
+        left: -30px;
+    }
+    .pieLogosRedes #img1{
+        width:40px;
+        position: relative;
+        margin-left:40px;
+
+    }
+    .pieLogosRedes #img2{
+        width:40px;    
+    }
        .cabana1{
         width: 80vw;
     }
@@ -1364,7 +1396,7 @@ hr{
         position: relative;
         top: -220px;
         overflow:visible;
-       
+      
     }
     .cabana1_texto{ 
         width: 98vw;  
@@ -1372,7 +1404,9 @@ hr{
         margin-left: 15px; 
         margin-top: -30px;
         font-size: 0.8rem;
-   
+        /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        grid-area: cab1texto;*/
     }
     .img1 img{
         width: 270px;
@@ -1437,15 +1471,21 @@ hr{
     @media  (max-width: 320px){
    
         .cabecera { /*Cabecera dePagina con Logo y Menu de Navegación*/
-            height: 16vh;
-            width: 130vw;
+            height: 12vh;
+            width: 132vw;
         }
         .cabeceraMenuLista{
-            margin-top: 5px;
+            margin-top: 12px;
         } 
+        .grillaMain{
+            width: 120vw;
+        }
+        .seccion1_imagen{
+            width: 110%;
+        }
         .pie{
             margin-top: 1600px;
-            width: 127vw;
+            width: 132vw;
             height: 16vh;
            }
         /*cabanas.html*/
@@ -1456,22 +1496,10 @@ hr{
             top: -180px;
             overflow:visible;
         }
-
-        /*.pieTexto p{
-            text-align: center;
-            margin-left: -100px;
-    
+        .marco{
+            margin-left: 35px;
         }
-        .pieLogosRedes{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: start;
-            position: relative;
-            top: 4px;
-            left: -30px;
-        }
-     */ 
+      
     }
 
     /*.transiciones img{
