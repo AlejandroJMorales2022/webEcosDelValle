@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Cabañas Ecos del Valle</title>
+    <link rel="stylesheet" href="../css/estilos.css"/>
+</head>
+<body>
+    <header class="cabecera">
+        <img class="cabeceraImg" src="../assets/images/logo.png"/>
+                          
+            <nav class="cabeceraMenuLista">
+                <ol class="cabeceraMenu_menu">
+                    <a href="../index.html"><li id="item1">Inicio</li></a>
+                    <a href="./cabanas.html"><li id="item2">Las Cabañas</li></a>
+                    <a href="./servicios.html"><li id="item3">Servicios</li></a>
+                    <a href="./ubicacion.html"><li id="item4">Ubicacion</li></a>
+                    <a href="./contacto.html"><li id="item5">Contacto</li></a>
+                </ol>
+            </nav>
+    </header>
+    <main>
+        <section class="seccionContacto">
+            <aside class="seccionContacto_formulario">
+                <article id="formulario">
+                    <form action="" method="post" enctype="text/plain">
+                        <fieldset  class="marco">
+                            <legend id="titulo"> <strong> CONTACTO </strong></legend>
+                            <div class="formBloque1">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre">
+                            </div>
+                            <div class=formBloque2>
+                                <label for="pasajeros">Pasajeros</label>
+                                <input type="text" id="pasajeros" name="pasajeros">
+                            
+                                <label for="telefono" id="lbl_telefono" name="telefono">Teléfono</label>
+                                <input type="text" name="telefono" id="telefono">
+                            </div>
+                            <div class="formBloque3">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email">
+                            </div>
+                            <div class="formBloque4">
+                            <label for="fechaD" id="lblFechaD" >Fecha de Ingreso</label>    
+                            <label for="fechaH" id="lblFechaH">Fecha de Egreso</label>
+                            </div>
+                            <div class="formBloque5">
+                            <input type="date" name="fechaD" id="fechaD">
+                            <input type="date" name="fechaH" id="fechaH">
+                            </div>
+                            <div class="formBloque6">
+                                <div><label for="obs">Observaciones</label></div>
+                                <textarea name="obs" id="obs" cols="60" rows="5"></textarea>
+                            </div>
+                            <div class="formBtn"><input type="submit" id="btnSend" name="enviar formulario"/></div>
+                        
+                        </fieldset>
+                    </form>
+                </article>
+            </aside>                
+            <aside class="seccionContacto_texto">
+                <div>
+                    <img class="logoWhatsApp" src="../assets/images/whatsapp-6860919__340.png" alt="logoDeWhatsApp">
+                </div>
+                <article id="textoContacto">
+                    
+                    <h3>Cabañas Ecos del Valle</h3>
+                    <p>
+                        Alberdi y Alvarez Thomas, B° El Verjel, Los Reartes
+                        Email: info@cabanasecosdelvalle.com.ar
+                        Tel/WhatsApp: 3546520243
+                    </p>
+                </article>
+                <div id="logosRedes">
+                    <a href="https://www.instagram.com/ecos_del_valle/?hl=es-la" target="_blank"><img id="img1" src="../assets/images/logo_instagram.png" alt="logo_instagram"></a>
+                    <a href="https://www.facebook.com/ecosdelvalle.cabanasenlosreartes/" target="_blank"><img id="img2" src="../assets/images/logo_facebook.png" alt="logo_facebook"></a>
+                </div>
+            </aside>
+        </section>
+    </main>
+        <footer class="pie">
+            <div class="pieTexto">
+                <p>Cabañas Ecos del Valle -
+               Alberdi y Alvarez Thomas, Los Reartes
+               <br>Tel: 3546520243 - info@cabanasecosdelvalle.com.ar
+                </p>
+            </div>
+            <div class="pieLogosRedes">
+                <div class="logoInst">
+                    <a href="https://www.instagram.com/ecos_del_valle/?hl=es-la" target="_blank"><img id="img1" src="../assets/images/logo_instagram.png" alt="logo_instagram"></a>
+                </div>
+                <div class="logoFace">
+                    <a href="https://www.facebook.com/ecosdelvalle.cabanasenlosreartes/" target="_blank"><img id="img2" src="../assets/images/logo_facebook.png" alt="logo_facebook"></a>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

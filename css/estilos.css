@@ -1,0 +1,1517 @@
+/*Instalando una Fuente Local luego de descargarla y copiar la carpeta de la fuente en el proyecto (assets/fonts)*/
+@font-face{
+    font-family: "diaDeFrutas";
+    src:url(../assets/fonts/FruitDays/Fruit\ Days.otf)
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+.cabeceraMenuLista a:link, a:visited, a:active{
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 0;
+}
+
+/*header cabecera de pagina INICIO*/
+#grilla{
+    
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "cuerpo"
+    "pie"
+    ;
+    /*grid-row-gap: 2px;
+    grid-column-gap: 2px;*/
+}
+.cabecera { /*Cabecera dePagina con Logo y Menu de Navegación*/
+    width: 100vw;
+    height: 14vh;
+    position: fixed;
+    grid-area: header;
+    background-color: #ab9680;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "cabeImg cabeMenu"
+    ;
+    /*grid-row-gap: 2px;
+    grid-column-gap: 2px;*/
+    justify-items: center;
+    align-items: center;
+}
+.grillaMain{
+    width: 100vw;
+    height: 71vh;
+    grid-area: cuerpo;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "sec1"
+    "sec2"
+    ;
+}
+.seccion1{
+    grid-area: sec1;
+    
+}
+.seccion2{
+    grid-area: sec2;
+    
+}
+
+.pie{
+    width: 100vw;
+    height: 12vh;
+    grid-area: pie;
+    background-color: #ab9680;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr;
+    grid-template-areas: 
+    "pieTxt pieLogo"
+    ;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    margin-top: 1100px;
+    overflow: hidden;
+    padding-left: 10px;
+   
+}
+.cabeceraImagen{
+    grid-area: cabeImg;
+}
+.cabeceraMenu{
+    grid-area: cabeMenu;
+    position: relative;
+    margin-top: -50px;
+}
+.cabeceraImg{
+    width: 400px;
+    padding: 5px;
+    position: relative;    
+}
+
+.pieTexto{
+    grid-area: pieTxt;
+}
+.pieLogosRedes{
+    grid-area: pieLogo;
+    display: flex;
+    flex-direction: row;
+}
+.pieLogosRedes #img1{
+    width:70px;
+}
+.pieLogosRedes #img2{
+    width:70px;
+}
+
+.cabeceraMenuLista li{
+    color:white;
+    list-style:none;
+    font: 16px arial;
+    padding: 8px;
+    display:inline-block;
+
+
+}
+body{
+    
+    width: 100vw;
+    height: 100vh;
+    background-color:#c7b69f;
+    color: #69503c;
+    /*overflow-x: hidden;*/
+}
+
+
+.pie_cabanas{ /*footer cabanas.html para extender el body ya que necesito mas espacio*/
+    top:800px;
+}
+.pie_servicios{ /*footer cabanas.html para extender el body ya que necesito mas espacio*/
+    top:700px;
+}
+
+
+.seccion1{
+    width: 100%;
+    height: 50%;
+    text-align: center;    
+    color: #69503c;
+    font-size: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.seccion2{
+    width: 100%;
+    height: 50%;
+    color: #69503c;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    
+    /*background-color:#c7b295;*/
+    
+}
+
+.seccion2_columnaDerecha{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.seccion2_columnaIzquierda{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.seccion1_texto{
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+    margin-left: 100px;
+    padding: 50px;
+}
+.seccion1_texto #titulo{
+    font-style: italic;
+}
+.seccion1_texto div{
+    position:relative;
+    top:30px;
+}
+
+.seccion1_imagen{
+    width: 100vw;
+    height: 500px;
+    
+}
+
+
+.seccion2_columnaIzquierda_articulo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.seccion2_columnaDerecha_articulo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion2_columnaIzquierda_articulo img{
+    width: 400px;
+    padding: 30px;
+   
+}
+
+.seccion2_columnaDerecha_articulo img{
+    width: 400px;
+    padding: 30px;
+}
+.seccion2_columnaDerecha_articulo h4{
+    font-family:"diaDeFrutas" ;
+    font-size: 1.5rem;
+    
+}
+.seccion2_columnaIzquierda_articulo h4{
+    font-family:"diaDeFrutas" ;
+    font-size: 1.5rem;
+    
+}
+.seccion2_columnaDerecha_articulo p{
+    width: 80%;
+    color: #69503c;
+
+}
+.seccion2_columnaIzquierda_articulo p{
+    width: 80%;
+    color: #69503c;
+
+}
+hr{
+    width:50%;
+    border-color:rgb(250, 248, 248);
+    border-width: 0.5px;
+    margin-top: 110px;
+    margin-left: 200px;
+}
+.logoWhatsApp{
+    width: 70px;
+    position:fixed;
+    right: 0px;
+    bottom: 100px;
+    
+}
+#titulo{
+    font-family:"diaDeFrutas" ;
+    font-size: 1.5rem;
+}
+/*Desde Aqui CSS contacto.html*/
+.seccionContacto{
+    width: 100vw;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "secfor sectexto"
+    ;
+    justify-items:center;
+    align-items: start;
+    
+}
+
+.seccionContacto_formulario{
+    /*float: left;
+    display: block;*/
+    width: 110%;
+    grid-area: secfor;
+    position: relative;
+    top: 180px;
+    left: 50px;
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom:  100px;
+    margin-top: -30px;
+    
+}
+.seccionContacto_texto{
+    /*float: right;
+    display: block;*/
+    grid-area: sectexto;
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    top: 300px;
+    right: 100px;
+    text-align: center;
+    font-size: 1rem;
+    margin-left: 200px;
+    
+}
+
+.seccionContacto_texto #logosRedes img{
+    width: 65px;
+}
+/*CSS formulario de contacto*/
+.formBloque1{
+    position: relative;
+    top: 40px;
+    left: 20px;
+    width: 90%;
+}
+.formBloque2{
+    position: relative;
+    top: 60px;
+    left: 20px;
+    width: 90%;
+}
+.formBloque3{
+    position: relative;
+    top: 80px;
+    left: 20px;
+    width: 90%;
+}
+.formBloque4{
+    position: relative;
+    top: 110px;
+    left: 120px;
+    width: 70%;
+}
+.formBloque5{
+    position: relative;
+    top: 120px;
+    left: 120px;
+    width: 70%;
+}
+.formBloque6{
+    position:relative;
+    top: 140px;
+    left: 100px; 
+    width: 150px;   
+}
+
+.formBtn{
+    position: relative;
+    top: 180px;
+    left: 100px;
+    width: 50%;
+}
+.formBloque1 #nombre{
+    width: 500px;
+    margin-left: 20px;
+}
+.formBloque2 #pasajeros{
+    width: 30px;
+    margin-left: 10px;
+}
+.formBloque2 #telefono{
+    width: 300px;   
+}
+.formBloque3 #email{
+    width: 500px;
+    margin-left: 17px;
+}
+.formBloque4 #lblFechaH{
+    margin-left: 132px;
+}
+.formBloque5 #fechaH{
+    width: 200px;
+    margin-left: 40px;
+}
+.formBloque5 #fechaD{
+    width: 200px;
+    
+}
+.formBtn #btnSend{
+    width: 100px;
+    height: 35px;
+}
+.marco{
+    width: 700px;
+    height: 460px;
+}
+/*CSS cabanas.html*/
+
+.contenedor{
+    position: relative;
+    top: 150px;
+    margin-left: 40px;
+}
+.navCabanas{
+    width: 60%;
+    /*float: left;*/
+    margin-left: 50px;
+}
+.tituloCabanas{
+    width: 40%;
+    float: right;
+    right: 300px;
+}
+.navegacion a:link, a:visited, a:active{
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 0;
+}
+.navegacion li{
+    color:rgb(223, 219, 219);
+    list-style:none;
+    font: 1rem arial;
+    padding: 5px;
+    background-color: #ab9680;
+    /*position: relative;
+    top: 150px;*/
+}
+.navegacion{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "cabItem1 cabItem2 cabItem3 cabItem4 cabItem5 cabItem6"
+    ;
+    /*float: left;*/
+    margin-left: -50px;
+    position:sticky;
+}
+.cabItem1{
+    grid-area: cabItem1;
+}
+.cabItem2{
+    grid-area: cabItem2;
+}
+.cabItem3{
+    grid-area: cabItem3;
+}
+.cabItem4{
+    grid-area: cabItem4;
+}
+.cabItem5{
+    grid-area: cabItem5;
+}
+.cabItem6{
+    grid-area: cabItem6;
+}
+/*Cabaña1*/
+.cabana1{
+    width: 100vw;
+    position: relative;
+    top: 20px;
+    margin-left: -30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "cab1foto cab1texto"
+    ;
+   
+}
+.cabana1_fotos{
+    width:60vw;
+    margin-left: 0px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:
+    "img1 img1 img1_1"
+    "img1 img1 img1_2"
+    "img1_3 img1_4 img1_5"
+    ;   
+    justify-items: start;
+    align-items: stretch;
+    grid-area: cab1foto;
+    overflow: hidden;
+    
+
+    
+}
+.cabana1_texto{ 
+    width: 35vw;   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    grid-area: cab1texto;
+}
+
+.img1{
+    grid-area: img1;
+    justify-self:center;
+    margin-left: 0px;
+
+}
+.img1_1{
+    grid-area: img1_1;
+    width:auto;
+    margin-right: 0px;
+    
+}
+.img1_2{
+    grid-area: img1_2;
+    width: auto;
+    
+}
+.img1_3{
+    grid-area: img1_3;
+    width: auto;
+    justify-self: center;
+    margin-left: 10px;
+}
+.img1_4{
+    grid-area: img1_4;
+    width: auto;
+    justify-self: center;
+    margin-left: -15px;
+    
+}
+.img1_5{
+    grid-area: img1_5;
+    width: auto;
+}
+
+.img1 img{
+    width: 400px;
+    
+}
+.img1_1 img{
+    width:190px;
+}
+.img1_2 img{
+    width: 190px;
+}
+.img1_3 img{
+    width: 190px;
+}
+.img1_4 img{
+    width: 190px;
+}
+.img1_5 img{
+    width: 190px;
+}
+
+.img1_1{ /* ****** DESDE ACA EFECTO TRANSITION:SCALE a las fotos */
+    transition: scale 2s;
+}
+.img1_1:hover{
+    scale: 2;
+}
+.img1_2{
+    transition: scale 2s;
+}
+.img1_2:hover{
+    scale: 2;
+}
+.img1_3{
+    transition: scale 2s;
+}
+.img1_3:hover{
+    scale: 2;
+}
+.img1_4{
+    transition: scale 2s;
+}
+.img1_4:hover{
+    scale: 2;
+}
+.img1_5{
+    transition: scale 2s;
+}
+.img1_5:hover{
+    scale: 2;
+  } /* ******HASTA ACA EFECTO TRANSITION:SCALE a las fotos */
+
+.cabana1_texto_titulo{ /*da estilo a los titulos de las 6 cabañas ya que en el html tienen todos asignado la misma class*/
+    text-align: center;
+    padding: 10px;
+    background-color: #ab9680;
+    color: rgb(233, 229, 229);
+}
+/*Cabaña2*/
+.cabana2{
+    width: 95%;
+    position: relative;
+    top: 80px;
+    left: 40px;   
+
+}
+.cabana2_fotos{
+    width:60vw;
+    float: right;
+    position: relative;
+    right: -60px;
+}
+.cabana2_texto{
+    width: 30vw;
+    float: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    position: relative;
+    top: 150px;
+}
+.img2_1{
+    width: 350px;
+}
+.img2_2{
+    width: 350px;
+}
+/*Cabaña3*/
+.cabana3{
+    width: 95%;
+    position: relative;
+    top: 100px;
+    left: 40px;   
+
+}
+.cabana3_fotos{
+    width:60vw;
+    float: left;
+    position: relative;
+    left: 10px;
+    top: 100px;
+}
+.cabana3_texto{
+    width: 30vw;
+    float: right;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    position: relative;
+    right:  60px;
+    top: 120px;
+}
+.img3_1{
+    width: 350px;
+}
+.img3S_2{
+    width: 350px;
+}
+/*Cabaña4*/
+.cabana4{
+    width: 95%;
+    position: relative;
+    top: 100px;
+    left: 40px;   
+
+}
+.cabana4_fotos{
+    width:60vw;
+    float: right;
+    position: relative;
+    right: -60px;
+    top: 200px;
+}
+.cabana4_texto{
+    width: 30vw;
+    float: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    position: relative;
+    top: 350px;
+    right: 800px;
+}
+.img4_1{
+    width: 350px;
+}
+.img4_2{
+    width: 350px;
+}
+/*Cabaña5*/
+.cabana5{
+    width: 95%;
+    position: relative;
+    top: 100px;
+    left: 40px;   
+
+}
+.cabana5_fotos{
+    width:60vw;
+    float: left;
+    position: relative;
+    left: 10px;
+    top: 300px;
+    
+}
+.cabana5_texto{
+    width: 30vw;
+    float: right;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    position: relative;
+    top: 320px;
+    right: 70px;
+}
+.img5_1{
+    width: 350px;
+}
+.img5_2{
+    width: 350px;
+}
+/*Cabaña6*/
+.cabana6{
+    width: 95%;
+    position: relative;
+    top: 100px;
+    left: 40px;   
+
+}
+.cabana6_fotos{
+    width:60vw;
+    float: right;
+    position: relative;
+    right: -60px;
+    top: 400px;
+}
+.cabana6_texto{
+    width: 30vw;
+    float: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    position: relative;
+    top: 420px;
+    left: 20px;
+}
+.img6_1{
+    width: 350px;
+}
+.img6_2{
+    width: 350px;
+}
+/*CSS para servicios.html*/
+.contenedor_servicios{
+    width: 95vw;
+    align-self: center;
+    margin: 5px;
+}
+.servicios_titulo{
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    top: 150px;
+}
+.servicios1_img img{
+    width: 400px;
+    float:left;
+    position: relative;
+    top: 250px;
+    left: 100px;
+}
+.servicios1_texto{
+    width: 40%;
+    float: right;
+    position: relative;
+    top: 300px;
+    right: 100px;
+}
+
+.servicios2_img img{
+    width: 400px;
+    float:right;
+    position: relative;
+    top: 400px;
+    right: 100px;
+}
+.servicios2_texto{
+    width: 40%;
+    float: left;
+    position: relative;
+    top: 350px;
+    left:  100px;
+}
+.servicios3_img img{
+    width: 400px;
+    float:left;
+    position: relative;
+    top: 450px;
+    left: 100px;
+}
+.servicios3_texto{
+    width: 40%;
+    float: right;
+    position: relative;
+    top: 500px;
+    right: 100px;
+}
+.servicios4_img img{
+    width: 400px;
+    float:right;
+    position: relative;
+    top: 600px;
+    right: 100px;
+}
+.servicios4_texto{
+    width: 40%;
+    float: left;
+    position: relative;
+    top: 550px;
+    left:  100px;
+}
+/*CSS ubicacion.html*/
+.ubicacion1_imagen{
+    width: 60%;
+    
+}
+.ubicacion1_imagen_img{
+    width: 550px;
+    float: left;
+    position: relative;
+    top: 200px;
+    left: 50px;
+}
+.ubicacion1_texto{
+    width: 38%;
+    float: right;
+    position: relative;
+    top: 200px;
+    right: 50px;
+}
+.textoAbajo{
+    width: 80%;
+    font-size: 1rem;
+    position: relative;
+    top: 300px;
+    left: 100px;
+    overflow: hidden;
+}
+
+
+/* MEDIA QUERY - DISEÑO RESPONSIVE */
+@media (max-width: 1024px){
+
+    .cabeceraMenuLista li{
+        font: 14px arial;
+        padding: 6px;    
+    }
+    .cabeceraImg{
+        width: 350px;
+        padding: 5px;
+          
+    }
+    
+    .seccion2_columnaIzquierda_articulo img{
+        width: 350px;
+        padding: 25px;
+       
+    }
+    .seccion2_columnaDerecha_articulo img{
+        width: 350px;
+        padding: 25px;
+       
+    }
+    .pie{
+        margin-top: 1150px;
+    }
+    .pieTexto{
+        font-size: 0.9rem;
+    }
+
+    /*cabanas.html*/
+    
+    .img1_3{
+        grid-area: img1_3;
+        width: auto;
+        justify-self: center;
+        margin-left: -5px;
+    }
+    .img1_4{
+        margin-left: 5px;
+    }
+
+}
+@media (max-width: 768px){
+
+    .cabeceraMenuLista li{
+        font: 12px arial;
+        padding: 4px;    
+    }
+    .cabeceraImg{
+        width: 330px;
+        padding: 4px;
+          
+    }
+    .seccion2_columnaIzquierda_articulo img{
+        width: 320px;
+        padding: 20px;
+       
+    }
+    .seccion2_columnaDerecha_articulo img{
+        width: 320px;
+        padding: 20px;
+       
+    }
+    .seccion2_columnaIzquierda_articulo p{
+        font-size: 0.9rem;
+        padding: 15px;
+        
+    }
+    .seccion2_columnaDerecha_articulo p{
+        font-size: 0.9rem;
+        padding: 15px;
+
+    }
+    .pie{
+        margin-top: 1200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .pieTexto{
+        width: 120%;
+        font-size: 0.8rem;
+        margin-left: 100px;
+    }
+    .pieLogosRedes{
+        display: flex;
+        flex-direction: row;
+        margin-right: 50px;
+
+    }
+    .pieLogosRedes #img1{
+        width:60px;
+    }
+    .pieLogosRedes #img2{
+        width:60px;
+    }
+    .logoWhatsApp{
+        width: 60px;
+        position:fixed;
+        right: 0px;
+        bottom: 100px;
+        
+    }
+    /*Desde Aqui CSS contacto.html*/
+    .seccionContacto{
+        width: 100vw;
+        height: 650px;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+        "secfor"
+        "sectexto"
+        ;
+        justify-items:center;
+        align-items: center;
+    
+    }
+
+    .seccionContacto_formulario{
+        /*float: left;
+        display: block;*/
+        width: 95%;
+        grid-area: secfor;
+        position: relative;
+        top: 180px;
+        left: 5px;
+        overflow: visible;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom:  100px;
+        margin-top: -30px;
+    
+    
+    }
+    .seccionContacto_texto{
+        /*float: right;
+        display: block;*/
+        grid-area: sectexto;
+        width: 50%;
+        overflow: hidden;
+        position: relative;
+        top: 250px;
+        right: 100px;
+        text-align: center;
+        font-size: 1rem;
+        margin-left: 200px;
+    
+    }
+
+
+    .seccionContacto_texto #logosRedes img{
+        width: 65px;
+    }
+    .cabana1{
+        width: 100vw;
+        position: relative;
+        top: 20px;
+        margin-left: -30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas:
+        "cab1texto"
+        "cab1foto"
+        ;
+    }
+    .cabana1_fotos{
+        width:80vw;
+        margin-left: 70px;
+        position: relative;
+        top: -200px
+        /*display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas:
+        "img1 img1 img1_1"
+        "img1 img1 img1_2"
+        "img1_3 img1_4 img1_5"
+        ;   
+        justify-items: start;
+        align-items: stretch;
+        grid-area: cab1foto;
+        overflow: hidden;*/
+    }
+    .cabana1_texto{ 
+        width: 80vw;  
+        height: 250px;
+        margin-left: 70px; 
+        /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        grid-area: cab1texto;*/
+    }
+    .navCabanas{
+        width: 55%;
+        /*float: left;*/
+        font-size: 0.7rem;
+        position: relative;
+        top:-30px
+
+    }
+    .tituloCabanas{
+        width: 30%;
+        float: right;
+        position: relative;
+        left: 0px;
+        top: -60px;
+        
+    }
+    .navegacion li{
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+}
+@media  (max-width: 425px){
+
+    .cabeceraMenuLista{
+        margin-top: 10px;
+    } 
+      .cabeceraMenuLista li{
+        font: 11px arial;
+        
+    
+       
+    }
+    .cabeceraImg{
+        width: 220px;
+        padding: 4px;
+          
+    }
+    #titulo{
+        font-family:"diaDeFrutas" ;
+        font-size: 1.3rem;
+    }
+    .seccion1_texto{
+        width: 80%;
+        text-align: center;
+        font-size: 0.8rem;
+        margin-left: 50px;
+        padding: 30px;
+    }  
+    .seccion1_imagen{
+        width: 100vw;
+        height: 300px;
+        
+    }
+    .seccion2_columnaIzquierda_articulo img{
+        width: 250px;
+        padding: 2px;
+       
+    }
+    .seccion2_columnaDerecha_articulo img{
+        width: 250px;
+        padding: 2px;
+       
+    }
+    .seccion2_columnaIzquierda_articulo p{
+        font-size: 0.8rem;
+        padding: 10px;
+        
+    }
+    .seccion2_columnaDerecha_articulo p{
+        font-size: 0.8rem;
+        padding: 1opx;
+
+    }
+    .seccion2_columnaDerecha_articulo h4{
+        font-family:"diaDeFrutas" ;
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    .seccion2_columnaIzquierda_articulo h4{
+        font-family:"diaDeFrutas" ;
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    hr{
+        width:50%;
+        border-color:rgb(250, 248, 248);
+        border-width: 0.5px;
+        position: relative;
+        margin-top: 110px;
+        margin-left: 50px;
+    }
+    
+    .pie{
+        margin-top: 1600px;
+        width: 100vw;
+        height: 16vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .pieTexto p{
+        text-align: center;
+        margin-left: -40px;
+        width: 90%;
+
+    }
+    .pieLogosRedes{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+        top: 4px;
+        left: -30px;
+    }
+    /*.pie{
+        margin-top: 1300px;
+    }
+    .pieTexto{
+        font-size: 0.6rem;
+    }*/
+    .pieLogosRedes #img1{
+        width:40px;
+        position: relative;
+        margin-left:40px;
+
+    }
+    .pieLogosRedes #img2{
+        width:40px;
+       
+       
+        
+    }
+    .logoWhatsApp{
+        width: 40px;
+        position:fixed;
+        right: 0px;
+        bottom: 100px;
+        
+    }
+    
+    .seccion2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+    .seccion2_columnaIzquierda{
+        width: 100%;
+    }
+    .seccion2_columnaDerecha{
+        width: 100%;
+    }
+    .formBloque1 #nombre{
+        width: 270px;
+    }
+    .formBloque2 #telefono{
+        width: 180px;
+    }
+    .formBloque3 #email{
+        width: 290px;
+    }
+    .formBloque4{
+        margin-left: -100px;
+        width: 360px;
+    }
+    .formBloque5{
+        margin-left: -100px;
+    }
+    .formBloque4 #lblFechaH {
+        width: 100px;
+        margin-left:65px;
+    }
+    .formBloque4 #lblFechaD{
+        width: 200px;
+    }
+    .formBloque5 #fechaD {
+        width: 100px;
+    } 
+    .formBloque5 #fechaH {
+        width: 100px;
+        margin-left: 70px;
+    }
+    .formBloque6 #obs {
+        width: 360px;
+    } 
+    .formBloque6 {
+        margin-left: -80px;
+    } 
+    .marco{
+        width: 400px;
+    }
+    /* cabanas.html */
+    .navCabanas{
+        width: 55%;
+        /*float: left;*/
+        font-size: 0.7rem;
+        position: relative;
+        top:-50px;
+        left:-20px
+
+    }
+    .tituloCabanas{
+        width: 70%;
+        float: right;
+        position: relative;
+        left: 0px;
+        top: -40px;
+        
+    }
+    .navegacion li{
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+    .cabana1{
+        width: 90vw;
+    }
+    .cabana1_fotos{
+        width:80vw;
+        margin-left: 15px;
+        position: relative;
+        top: -220px;
+        overflow:visible;
+        /*display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas:
+        "img1 img1 img1_1"
+        "img1 img1 img1_2"
+        "img1_3 img1_4 img1_5"
+        ;   
+        justify-items: start;
+        align-items: stretch;
+        grid-area: cab1foto;
+        overflow: hidden;*/
+    }
+    .cabana1_texto{ 
+        width: 95vw;  
+        height: 250px;
+        margin-left: 0px; 
+        margin-top: -30px;
+        font-size: 0.8rem;
+        /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        grid-area: cab1texto;*/
+    }
+    .img1 img{
+        width: 300px;
+        
+    }
+    .img1_1 img{
+        width:120px;
+    }
+    .img1_2 img{
+        width: 120px;
+    }
+    .img1_3 img{
+        width: 120px;
+    }
+    .img1_4 img{
+        width: 120px;
+    }
+    .img1_5 img{
+        width: 120px;
+    }
+    .img1{
+        grid-area: img1;
+        justify-self:center;
+        margin-left: 0px;
+    
+    }
+    .img1_1{
+        grid-area: img1_1;
+        width:auto;
+        margin-left: 40px;
+        
+    }
+    .img1_2{
+        grid-area: img1_2;
+        width: auto;
+        margin-left: 40px;
+
+        
+    }
+    .img1_3{
+        grid-area: img1_3;
+        width: auto;
+        justify-self: center;
+        margin-left: -30px;
+        
+    }
+    .img1_4{
+        grid-area: img1_4;
+        width: auto;
+        justify-self: center;
+        margin-left: 30px;
+        
+    }
+    .img1_5{
+        grid-area: img1_5;
+        width: auto;
+        margin-left: 40px;
+    }
+
+}
+
+
+@media  (max-width: 375px){
+   
+    .cabecera { /*Cabecera dePagina con Logo y Menu de Navegación*/
+        height: 16vh;
+        width: 108vw;
+    }
+    .cabeceraMenuLista{
+        margin-top: 5px;
+    } 
+    .pie{
+        margin-top: 1600px;
+        width: 108vw;
+        height: 16vh;
+       }
+       .cabana1{
+        width: 80vw;
+    }
+    /*cabanas.html*/
+    .navCabanas{
+        width: 55%;
+        /*float: left;*/
+        font-size: 0.7rem;
+        position: relative;
+        top:-50px;
+        left:-30px
+
+    }
+    .cabana1_fotos{
+        width:70vw;
+        margin-left: 15px;
+        position: relative;
+        top: -220px;
+        overflow:visible;
+        /*display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas:
+        "img1 img1 img1_1"
+        "img1 img1 img1_2"
+        "img1_3 img1_4 img1_5"
+        ;   
+        justify-items: start;
+        align-items: stretch;
+        grid-area: cab1foto;
+        overflow: hidden;*/
+    }
+    .cabana1_texto{ 
+        width: 98vw;  
+        height: 250px;
+        margin-left: 15px; 
+        margin-top: -30px;
+        font-size: 0.8rem;
+        /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        grid-area: cab1texto;*/
+    }
+    .img1 img{
+        width: 270px;
+        
+    }
+    .img1_1 img{
+        width:100px;
+    }
+    .img1_2 img{
+        width: 100px;
+    }
+    .img1_3 img{
+        width: 100px;
+    }
+    .img1_4 img{
+        width: 100px;
+    }
+    .img1_5 img{
+        width: 100px;
+    }
+    .img1{
+        grid-area: img1;
+        justify-self:center;
+        margin-left: 25px;
+    
+    }
+    .img1_1{
+        grid-area: img1_1;
+        width:auto;
+        margin-left: 40px;
+        
+    }
+    .img1_2{
+        grid-area: img1_2;
+        width: auto;
+        margin-left: 40px;
+
+        
+    }
+    .img1_3{
+        grid-area: img1_3;
+        width: auto;
+        justify-self: center;
+        margin-left: -5px;
+        
+    }
+    .img1_4{
+        grid-area: img1_4;
+        width: auto;
+        justify-self: center;
+        margin-left: 40px;
+        
+    }
+    .img1_5{
+        grid-area: img1_5;
+        width: auto;
+        margin-left: 40px;
+    }
+}
+
+
+    @media  (max-width: 320px){
+   
+        .cabecera { /*Cabecera dePagina con Logo y Menu de Navegación*/
+            height: 16vh;
+            width: 130vw;
+        }
+        .cabeceraMenuLista{
+            margin-top: 5px;
+        } 
+        .pie{
+            margin-top: 1600px;
+            width: 127vw;
+            height: 16vh;
+           }
+        /*cabanas.html*/
+        .cabana1_fotos{
+            width:70vw;
+            margin-left: 15px;
+            position: relative;
+            top: -180px;
+            overflow:visible;
+        }
+
+        /*.pieTexto p{
+            text-align: center;
+            margin-left: -100px;
+    
+        }
+        .pieLogosRedes{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            position: relative;
+            top: 4px;
+            left: -30px;
+        }
+     */ 
+    }
+
+    /*.transiciones img{
+        background-color: red;
+        width: 250px;
+        height: 100px;
+        transition: width 2s;
+
+    }
+    .transiciones img:hover{
+        height: 200px;
+        width: 500px;
+        src:"./assets/images/mapa.png"
+
+    }
+    */
+ 
